@@ -51,7 +51,7 @@ def getMessage():
 @server.route("/")
 def webhook():
     bot.remove_webhook()
-    bot.set_webhook(url='https://desolate-falls-54266.herokuapp.com/' + TOKEN)
+    bot.set_webhook(url='https://pure-plains-88780.herokuapp.com/' + TOKEN)
     return "!", 200
 
 
