@@ -84,7 +84,6 @@ requests==2.22.0
 requests-unixsocket==0.1.5
 SecretStorage==2.3.1
 Send2Trash==1.5.0
-setools==4.1.1
 setproctitle==1.1.10
 simplejson==3.13.2
 six==1.12.0
