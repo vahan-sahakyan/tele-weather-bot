@@ -12,6 +12,7 @@ decorator==4.1.2
 defusedxml==0.6.0
 Django==2.2.2
 entrypoints==0.3
+Flask==0.8
 feedparser==5.2.1
 geojson==2.4.1
 html5lib==0.999999999
