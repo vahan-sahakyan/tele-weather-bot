@@ -3,7 +3,7 @@ import telebot
 import pyowm
 import os
 
-TOKEN = pyowm.OWM('bd4020999b62f43d52b17e4684c59965')
+owm = pyowm.OWM('bd4020999b62f43d52b17e4684c59965')
 bot = telebot.TeleBot("780352854:AAHXCsAW4SJi1juBgJ6JZ_vbPXafsCU2DKI")
 server = Flask(__name__)
 
@@ -42,7 +42,7 @@ def send_echo(message):
 
 bot.polling(none_stop=True)
 
-@server.route('/' + TOKEN, methods=['POST'])
+@server.route('/' + owm, methods=['POST'])
 def getMessage():
     bot.process_new_updates([telebot.types.Update.de_json(request.stream.read().decode("utf-8"))])
     return "!", 200
@@ -51,7 +51,7 @@ def getMessage():
 @server.route("/")
 def webhook():
     bot.remove_webhook()
-    bot.set_webhook(url='https://pure-plains-88780.herokuapp.com/' + TOKEN)
+    bot.set_webhook(url='https://pure-plains-88780.herokuapp.com/' + owm)
     return "!", 200
 
 
